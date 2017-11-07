@@ -10,14 +10,17 @@
     <header class="page-header">
       <nav class="main-navigation">
         <a class="header-logo" href="index.html">
-          <img src="img/logo.png" width="163" height="36" alt="Логотип DEVICE">
+          <img src="img/logo.png" width="163" height="36" alt="DEVICE">
         </a>
     <!--поиск по сайту-->
         <ul class="user-navigation">
-          <li class="login">Войти</li>
+          <li class="login"><a href="#">Валентин петухов</a></li>
+          <li class="logout"><a href="#">Выйти</a></li>
         </ul>
-        <a class="compare" href="#" title="Сравнить товары">Сравнить</a>
-        <a class="cart" href="#" title="Оплатить покупку">Корзина</a>
+        <ul>
+          <li class="compare"><a href="#" title="Сравнить товары">Сравнить</a></li>
+          <li class="cart"><a href="#" title="Оплатить покупку">Корзина</a></li>
+        </ul>
         <ul class="main-menu">
           <li>
             <a href="#">Каталог товаров</a>
@@ -25,8 +28,12 @@
               <li><a href="#">Виртуальная реальность</a></li>
               <li><a href="catalog.html">Моноподы для селфи</a></li>
               <li><a href="#">Экшн-камеры</a></li>
+            </ul>
+            <ul class="sub-menu">
               <li><a href="#">Фитнес-браслеты</a></li>
               <li><a href="#">Умные часы</a></li>
+            </ul>
+            <ul class="sub-menu">
               <li><a href="#">Квадрокоптеры</a></li>
             </ul>
           </li>
@@ -45,95 +52,122 @@
         <li><a href="catalog.html">Моноподы для селфи</a></li>
       </ul>
     <!--  Фильтр  -->
-      <section class="product-filter">
+      <section class="filter">
         <h2 class="section-title filter-title">Фильтр:</h2>
     <!--  форма фильтра  -->
       </section>
     <!--  Каталог товаров  -->
-      <section class="price">
+      <section class="catalog">
         <h2 class="visual-hidden">Каталог товаров</h2>
-<!--
-        <header class="price-header">
-          <h3>Сортировка:</h3>
-        </header>
+        <div class="sorting">
+          <b>Сортировка:</b>
+          <ul>
+            <li class="sorting-price">По цене</li>
+            <li class="sorting-type">По типу</li>
+            <li class="sorting-popular">По популярности</li>
+            <li class="sorting-ascend">По возрастанию</li>
+            <li class="sorting-descend">По убыванию</li>
+          </ul>
+        </div>
+        
+        <ul class="catalog-list">
+<!-- предварительно оставлю свой вариант твой закомменчу,  
+
+<li class="catalog-item"> 
+  <div class="catalog-img"> 
+    <img src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
+    <div class="catalog-hidden"> 
+      <a href="#" class="catalog-btn">В корзину</a>
+      <a href="#" class="catalog-link">Добавить к сравнению</a>
+    </div>
+  </div>
+  <div class="catalog-price"> 
+    <a href="#">Любительская селфи-палка</a>
+    <span class="catalog-cost">500 руб.</span>
+  </div>    
+</li>
 -->
-        <ul class="price-list">
-          <li class="price-item">
-            <a href="#"><h3 class="price-title">Любительская селфи-палка</h3></a>
+          <li class="catalog-item">
             <img src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
-            <div class="price-hidden">
-              <span class="btn">В корзину</span>
-              <span>Добавить к сравнению</span>
+            <div class="catalog-hidden">
+              <a class="btn" href="#">В корзину</a>
+              <a href="#">Добавить к сравнению</a>
             </div>
+            <a href="#"><h3 class="catalog-title">Любительская селфи-палка</h3></a>
             <span>500 руб.</span>
           </li>
           <li class="catalog-item">
-             <a href="#"><h3 class="price-title">Профессиональная селфи-палка</h3></a>
             <img src="img/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
-            <div class="price-hidden">
-              <span class="btn">В корзину</span>
-              <span>Добавить к сравнению</span>
+            <div class="catalog-hidden">
+              <a class="btn" href="#">В корзину</a>
+              <a href="#">Добавить к сравнению</a>
             </div>
+            <a href="#"><h3 class="catalog-title">Профессиональная селфи-палка</h3></a>
             <span>1500 руб.</span>
           </li>
           <li class="catalog-item">
-             <a href="#"><h3 class="price-title">Непотопляемая селфи-палка</h3></a>
             <img src="img/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
-            <div class="price-hidden">
-              <span class="btn">В корзину</span>
-              <span>Добавить к сравнению</span>
+            <div class="catalog-hidden">
+              <a class="btn" href="#">В корзину</a>
+              <a href="#">Добавить к сравнению</a>
             </div>
+            <a href="#"><h3 class="catalog-title">Непотопляемая селфи-палка</h3></a>
             <span>2500 руб.</span>
           </li>
           <li class="catalog-item">
-             <a href="#"><h3 class="price-title">Селфи-палка «Следуй за мной»</h3></a>
             <img src="img/item-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
-            <div class="price-hidden">
-              <span class="btn">В корзину</span>
-              <span>Добавить к сравнению</span>
+            <div class="catalog-hidden">
+              <a href="#" class="btn">В корзину</a>
+              <a href="#">Добавить к сравнению</a>
             </div>
+            <a href="#"><h3 class="catalog-title">Селфи-палка «Следуй за мной»</h3></a>
             <span>4900 руб.</span>
             <span class="label">new</span>
           </li>
         </ul>
-<!--
-        <footer class="price-footer">
-          <span class="back">Назад</span>
-          <ol>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
+<!--сдесь стоит мне использовать <ol>? поидее это нумерация страниц и вроде как порядок страниц важен, а значит и порядок в списке тоже, но я чет сомневаюсь  -->
+        <div class="pagination">
+          <a class="pagination-back" href="#">Назад</a>
+          <ol class="pagination-list">
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
           </ol>
-          <span class="next">Вперёд</span>
-        </footer>
--->
+          <a class="pagination-next" href="#">Вперёд</a>
+        </div>
       </section>
     </main>
   <!--   Подвал  -->
     <footer class="page-footer">
-      <nav class="footer-navigation">
+      <div class="footer-top">
         <a class="footer-logo">
           <img src="img/footer-logo.png" width="163" height="36" alt="Логотип DEVICE">
         </a>
         <ul class="user-navigation">
-          <li class="login">Войти</li>
+          <li class="login"><a href="#">Войти</a></li>
         </ul>
-        <a class="compare" href="#" title="Сравнить товары">Сравнить</a>
-        <a class="cart" href="#" title="Оплатить покупку">Корзина</a>
+        <ul>
+          <li class="compare"><a href="#" title="Сравнить товары">Сравнить</a></li>
+          <li class="cart"><a href="#" title="Оплатить покупку">Корзина</a></li>
+        </ul>
+      </div>
+      <div class="footer-middle">
+        <p>г. Москва, ул. Строителей, 15</p>
         <ul class="footer-menu">
           <li><a href="#">Доставка</a></li>
           <li><a href="#">Гарантия</a></li>
           <li><a href="#">Контакты</a></li>
         </ul>
-      </nav>
-      <p>г. Москва, ул. Строителей, 15</p>
-      <ul class="foter-social">
-        <li><a class="social-btn" href="#">Фейсбук</a></li>
-        <li><a class="social-btn" href="#">Инстаграм</a></li>
-        <li><a class="social-btn" href="#">Твиттер</a></li>
-      </ul>
-      <p>Тел.: +7 (495) 495-95-95</p>
-      <a class="copyright" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">htmlacademy</a>
+        <p>Тел.: +7 (495) 495-95-95</p>
+      </div>
+      <div class="footer-bottom">
+        <ul class="foter-social">
+          <li><a class="social-btn" href="#">Фейсбук</a></li>
+          <li><a class="social-btn" href="#">Инстаграм</a></li>
+          <li><a class="social-btn" href="#">Твиттер</a></li>
+        </ul>
+        <a class="copyright" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">htmlacademy</a>
+      </div>
     </footer>
   </body>
 </html>
