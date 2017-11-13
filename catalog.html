@@ -12,7 +12,10 @@
         <a class="header-logo" href="index.html">
           <img src="img/logo.svg" width="164" height="36" alt="DEVICE">
         </a>
-    <!--поиск по сайту-->
+        <form class="search-form" method="get" action="https://echo.htmlacademy.ru">
+          <input type="search" name="search" placeholder="Поиск по сайту" autofocus>
+          <button class="search-hidden" type="submit">Найти</button>
+        </form>
         <ul class="user-navigation">
           <li class="login"><a href="#">Валентин петухов</a></li>
           <li class="logout"><a href="#">Выйти</a></li>
@@ -49,12 +52,54 @@
       <ul class="breadcrumbs">
         <li><a href="index.html">Главная</a></li>
         <li><a href="#">Каталог товаров</a></li>
-        <li><a href="catalog.html">Моноподы для селфи</a></li>
+        <li class="breadcrumbs-current"><a>Моноподы для селфи</a></li>
       </ul>
     <!--  Фильтр  -->
       <section class="filter">
         <h2 class="section-title filter-title">Фильтр:</h2>
-    <!--  форма фильтра  -->
+        <form class="filter-form" method="post" action="https://echo.htmlacademy.ru">
+          <fieldset class="filter-cost">
+            <legend>Стоимость</legend>
+            <input type="range" min="0" max="5000" step="1">
+            <span>От 0</span>
+            <span>до 5000</span>
+          </fieldset>
+          <fieldset class="filter-color">
+            <legend>Цвет</legend>
+            <label>
+              <input type="checkbox" name="black" checked>
+              Черный
+            </label>
+            <label>
+              <input type="checkbox" name="white">
+              Белый
+            </label>
+            <label>
+              <input type="checkbox" name="blue" checked>
+              Синий
+            </label>
+            <label>
+              <input type="checkbox" name="red" checked>
+              Красный
+            </label>
+            <label>
+              <input type="checkbox" name="pink">
+              Розовый
+            </label>
+          </fieldset>
+          <fieldset class="filter-bluetooth">
+            <legend>Bluetooth</legend>
+            <label>
+              <input type="radio" name="bluetooth" value="yes" checked>
+              Есть
+            </label>
+            <label>
+              <input type="radio" name="bluetooth" value="no">
+              Нет
+            </label>
+          </fieldset>
+          <button class="btn" type="submit">Показать</button>
+        </form>
       </section>
     <!--  Каталог товаров  -->
       <section class="catalog">
@@ -62,11 +107,11 @@
         <div class="sorting">
           <h3 class="sorting-title">Сортировка:</h3>
           <ul>
-            <li class="sorting-price">По цене</li>
-            <li class="sorting-type">По типу</li>
-            <li class="sorting-popular">По популярности</li>
-            <li class="sorting-ascend">По возрастанию</li>
-            <li class="sorting-descend">По убыванию</li>
+            <li class="sorting-price"><button class="sorting-btn" type="button">По цене</button></li>
+            <li class="sorting-type"><button class="sorting-btn" type="button">По типу</button></li>
+            <li class="sorting-popular"><button class="sorting-btn" type="button">По популярности</button></li>
+            <li class="sorting-ascend"><button class="sorting-btn" type="button">По возрастанию</button></li>
+            <li class="sorting-descend"><button class="sorting-btn" type="button">По убыванию</button></li>
           </ul>
         </div>
         
@@ -162,11 +207,11 @@
       </div>
       <div class="footer-bottom">
         <ul class="foter-social">
-          <li><a class="social-btn" href="#">Фейсбук</a></li>
-          <li><a class="social-btn" href="#">Инстаграм</a></li>
-          <li><a class="social-btn" href="#">Твиттер</a></li>
+          <li><a class="social-btn" href="#" title="Мы в фейсбуке" target="_blank">Фейсбук</a></li>
+          <li><a class="social-btn" href="#" title="Наш инстаграм" target="_blank">Инстаграм</a></li>
+          <li><a class="social-btn" href="#" title="Наш твиттер" target="_blank">Твиттер</a></li>
         </ul>
-        <a class="copyright" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">htmlacademy</a>
+        <a class="copyright" href="https://htmlacademy.ru/intensive/htmlcss" title="htmlacademy.ru" target="_blank">htmlacademy</a>
       </div>
     </footer>
   </body>

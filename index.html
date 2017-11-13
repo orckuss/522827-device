@@ -12,7 +12,10 @@
         <a class="header-logo">
           <img src="img/logo.svg" width="164" height="36" alt="Логотип DEVICE">
         </a>
-    <!--поиск по сайту-->
+        <form class="search-form" method="get" action="https://echo.htmlacademy.ru">
+          <input type="search" name="search" placeholder="Поиск по сайту" autofocus>
+          <button class="search-hidden" type="submit">Найти</button>
+        </form>      
         <ul class="user-navigation">
           <li class="login"><a href="#">Войти</a></li>
         </ul>
@@ -219,17 +222,31 @@
       </div>
       <div class="footer-bottom">
         <ul class="foter-social">
-          <li><a class="social-btn" href="#">Фейсбук</a></li>
-          <li><a class="social-btn" href="#">Инстаграм</a></li>
-          <li><a class="social-btn" href="#">Твиттер</a></li>
+          <li><a class="social-btn" href="#" title="Мы в фейсбуке" target="_blank">Фейсбук</a></li>
+          <li><a class="social-btn" href="#" title="Наш инстаграм" target="_blank">Инстаграм</a></li>
+          <li><a class="social-btn" href="#" title="Наш твиттер" target="_blank">Твиттер</a></li>
         </ul>
-        <a class="copyright" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">htmlacademy</a>
+        <a class="copyright" href="https://htmlacademy.ru/intensive/htmlcss" title="htmlacademy.ru" target="_blank">htmlacademy</a>
       </div>
     </footer>
   <!--  Модальное окно "Пишите нам"  -->
     <section class="modal modal-feedback">
       <h2 class="visual-hidden">Обратная связь</h2>
-  <!--  форма  -->
+      <form class="feedback" method="post" action="https://echo.htmlacademy.ru">
+        <p>
+          <label for="name">Ваше имя</label>
+          <input type="text" id="name" name="name" required placeholder="Представьтесь, пожалуйста">
+        </p>
+        <p>
+          <label for="email">Ваш e-mail:</label>
+          <input type="email" id="email" name="email" placeholder="Для отправки ответа" required>
+        </p>
+        <p>
+          <label for="message">Текст письма:</label>
+          <textarea id="message" name="message" placeholder="В свободной форме" rows="5" cols="50"></textarea>
+        </p>
+        <button class="btn" type="submit">Отправить</button>
+      </form>
       <button class="modal-close" type="button">Закрыть</button> 
     </section>
   <!--  Модальное окно "Карта"  -->
