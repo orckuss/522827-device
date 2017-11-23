@@ -1,17 +1,515 @@
-.page-header {}
-.container {}
-.visual-hidden {}
-.promo {}
-.btn {}
-.products {}
-.services {}
-.partners {}
-.about-us {}
-.section-title {}
-.contacts {}
-.page-footer {}
-.modal {}
+@font-face {
+  font-family: "Gilroy";
+  font-weight: normal;
+  font-style: normal;
+  src: 
+    local("Gilroy Light"),
+    local("Gilroy-Light"),
+    url("../fonts/gilroylight.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Gilroy";
+  font-weight: bold;
+  font-style: normal;
+  src: 
+    local("Gilroy-ExtraBold"),
+    local("Gilroy ExtraBold"),
+    url("../fonts/gilroyextrabold.woff2") format("woff2");
+}
+body {
+  padding: 0;
+  margin: 0;
+  
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 30px;
+  color: rgba(70, 70, 70, 1.00);
+/*  letter-spacing: 1px;*/
+}
+a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 1.00);
+}
+* {
+  box-sizing: border-box;
+}
+.visual-hidden {
+  position: absolute;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	width: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+}
+.btn {
+  position: relative;
+  z-index: 1;
+  
+  display: inline-block;
+  min-width: 220px; 
+  max-width: 100%;
+  padding: 10px;
+  
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1;
+  color: rgba(0, 0, 0, 1.00);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+  vertical-align: top;
+  
+  background: 0;
+  border: none;
+}
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform:translateY(-50%);   
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 8px;
+  background-color: #f0c52e;
+  transition: .3s linear;
+}
+.btn:hover::after,
+.btn:focus::after {
+  height: 100%;
+}
+.btn:hover,
+.btn:focus {
+  outline: none;
+}
+.btn:active {
+  color: rgba(0, 0, 0, 0.30);
+}
 .modal-close {}
-.catalog {}
-.filter {}
+.header-logo[href="index.html"]:hover,
+.header-logo[href="index.html"]:focus,
+.footer-logo[href="index.html"]:hover,
+.footer-logo[href="index.html"]:focus {
+  opacity: 0.6;
+  outline: none;
+}
+.header-logo[href="index.html"]:active,
+.footer-logo[href="index.html"]:active {
+  opacity: 0.3;
+}
+.page-header {
+  background-color: rgba(247, 226, 150, 1.00);
+}
+.search-form input {
+  margin-right: -4px;
+  
+  font: inherit;
+  line-height: 36px;
+  color: rgba(0, 0, 0, 1.00);
+  
+  border: none;
+  background-color: transparent;
+  opacity: 0.4;
+}
+.search-form input:hover {
+  opacity: 0.8;
+}
+.search-form input:focus {
+  outline: none;
+  opacity: 1;
+  border-bottom: 2px solid rgba(0, 0, 0, 1.00);
+}
+.search-hidden {
+  font: inherit;
+  line-height: 36px;
+  color: rgba(0, 0, 0, 1.00);
+  
+  border: 2px solid rgba(0, 0, 0, 1.00);
+  background-color: transparent;
+  opacity: 0; 
+}
+.search-form input:focus ~ .search-hidden,
+.search-hidden:focus {
+  opacity: 1;
+}
+.search-hidden:hover,
+.search-hidden:focus {
+  color: rgba(255, 255, 255, 1.00);
+  
+  background-color: rgba(0, 0, 0, 1.00);
+  outline: none;
+}
+.search-hidden:active {
+  color: rgba(255, 255, 255, 0.30);
+}
+.user-nav,
+.commerce-nav {
+  line-height: 36px; 
+  list-style: none;
+}
+.page-header a:hover,
+.page-header a:focus {
+  color: rgba(0, 0, 0, 0.60);
+  outline: none;
+}
+.page-header a:active {
+  color: rgba(0, 0, 0, 0.30);
+}
+.main-menu {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+/*  Указал тут auto, т.к. в макете auto, или лучше сделать таким же как размер шрифта*/
+  line-height: auto;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  
+  list-style: none;
+}
+.sub-menu {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 36px;
+  text-transform: none;
+  letter-spacing: normal;
+  
+  list-style: none;
+}
 
+.container {}
+.promo-list {
+  list-style: none;
+}
+.promo-number {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 179px;
+  line-height: 179px;
+  color: rgba(255, 255, 255, 1.00);
+/*  временный контрастный фон*/
+  background-color: black;
+}
+.promo-tagline {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 47px;
+  line-height: 47px;
+  color: rgba(0, 0, 0, 1.00);
+}
+.promo-table th {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 20px;
+}
+.promo-table td {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 35px;
+  line-height: 1;
+  color: rgba(0, 0, 0, 1.00);
+}
+.products-list {
+  list-style: none;
+}
+.products-item a {
+/*  position: relative;*/
+  
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+}
+.products-item a:active {
+  color: rgba(0, 0, 0, 0.30);
+}
+.products-item::before {
+/*  position: absolute;*/
+/*  z-index: -1;*/
+  
+  content: "";
+  min-width: 160px;
+  min-height: 160px;
+  background-color: rgba(240, 197, 46, 0.50);
+}
+.products-item:hover::before {
+  background-color: rgba(240, 197, 46, 1.00);
+}
+.services {
+  background-color: rgba(229, 229, 229, 1.00);
+}
+.services-list {
+  list-style: none;
+}
+.services-title {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 47px;
+  color: rgba(0, 0, 0, 1.00);
+}
+.brands-list {
+  list-style: none;
+}
+.wrapper .section-title {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 47px;
+  color: rgba(0, 0, 0, 1.00);
+}
+.about-us ul {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 40px;
+  color: rgba(0, 0, 0, 1.00);
+}
+.modal {}
+.feedback label {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 1.00);
+}
+.feedback input,
+.feedback textarea {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(70, 70, 70, 0.40);
+  
+  border: none;
+  background-color: rgba(229, 229, 229, 0.50);
+  outline: none;
+}
+.feedback input:hover,
+.feedback textarea:hover {
+  background-color: rgba(229, 229, 229, 0.80);
+}
+.feedback input:focus,
+.feedback textarea:focus {
+  color: rgba(70, 70, 70, 1.00);
+  
+  background-color: transparent;
+  border: 3px solid rgba(240, 197, 46, 0.50);
+}
+.feedback input:invalid {
+  background-color: rgba(237, 181, 181, 0.50);
+}
+.page-title {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 47px;
+  color: rgba(0, 0, 0, 1.00);
+}
+.breadcrumbs {
+  color: rgba(0, 0, 0, 0.30);
+  list-style: none;
+}
+.breadcrumbs a {
+  font-size: 14px;
+  line-height: 36px;
+  color: rgba(0, 0, 0, 0.30);
+}
+.breadcrumbs a:hover,
+.breadcrumbs a:focus {
+  color: rgba(0, 0, 0, 0.60);
+  outline: none;
+}
+.breadcrumbs a:active {
+  color: rgba(0, 0, 0, 0.10);
+}
+.filter {
+  background-color: rgba(238, 238, 238, 1.00);
+}
+.filter-title {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.08);
+}
+.filter-form {
+  border-top: 2px solid rgba(0, 0, 0, 1.00);
+}
+.filter-form fieldset {
+/*  display: flex;*/
+/*  flex-direction: column; */
+  border: none;
+}
+.filter-form fieldset:not(:last-of-type) {
+  border-bottom: 2px solid rgba(0, 0, 0, 1.00);
+}
+.filter-form legend {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+}
+.filter-form label {
+  font-size: 14px;
+  line-height: 40px;
+  color: rgba(0, 0, 0, 1.00);
+}
+.sorting {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+.sorting-title {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+}
+.sorting-list {
+  list-style: none;
+}
+.sorting-btn {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  cursor: default;
+  opacity: 0.3;
+  outline: none;
+}
+.sorting-btn:hover,
+.sorting-btn:focus {
+  opacity: 0.6;
+}
+.sorting-btn:active {
+  opacity: 1;
+}
+.catalog-list {
+  list-style: none;
+}
+.catalog-title {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+}
+.catalog-item span {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+}
+.add-compare-btn {
+  display: inline-block;
+  min-width: 220px; 
+  max-width: 100%;
+  
+  font-size: 13px;
+  line-height: 36px;
+  color: rgba(0, 0, 0, 0.50);
+  text-align: center;
+  vertical-align: top;
+}
+.add-compare-btn:hover,
+.add-compare-btn:focus {
+  color: rgba(0, 0, 0, 1.00);
+  outline: none;
+}
+.add-compare-btn:active {
+  color: rgba(0, 0, 0, 0.20);
+}
+.catalog-img {
+  position: relative;
+}
+.catalog-hidden {
+  position: absolute;
+  top: 54%;
+  transform:translateY(-50%);
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+}
+.catalog-item:hover {}
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.08);
+}
+.pagination a {
+  display: inline-block;
+  padding: 23px 30px;
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  cursor: default;
+}
+.pagination-back:hover,
+.pagination-back:focus,
+.pagination-next:hover,
+.pagination-next:focus {
+  background-color: rgba(0, 0, 0, 0.08);
+  outline: none;
+}
+.pagination-next:active,
+.pagination-back:active {
+  color: rgba(0, 0, 0, 0.30);
+}
+.pagination-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.pagination-number {
+  opacity: 0.3;
+}
+.pagination-number:hover,
+.pagination-number:focus {
+  opacity: 0.6;
+  outline: none;
+}
+.pagination-number:active {
+  opacity: 1;
+}
+.sorting-current,
+.pagination-current {
+  opacity: 1;
+} 
+.page-footer {
+  color: rgba(255, 255, 255, 1.00);
+  background-color: rgba(70, 70, 70, 1.00);
+}
+.footer-top a {
+  color: rgba(255, 255, 255, 0.70);
+}
+.footer-top a:hover,
+.footer-top a:focus {
+  color: rgba(255, 255, 255, 1.00);
+  outline: none;
+}
+.footer-top a:active {
+  color: rgba(255, 255, 255, 0.30);
+}
+.footer-menu {
+  list-style: none;
+}
+.footer-menu a {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 1.00);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.footer-menu a:hover,
+.footer-middle a:focus {
+  color: rgba(255, 255, 255, 0.60);
+  outline: none;
+}
+.footer-middle a:active {
+  color: rgba(255, 255, 255, 0.30);
+}
+.footer-social {
+  list-style: none;
+}
+.social-btn {}
