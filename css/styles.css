@@ -16,7 +16,10 @@
     local("Gilroy ExtraBold"),
     url("../fonts/gilroyextrabold.woff2") format("woff2");
 }
+html { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit; }
 body {
+  min-width: 1200px;
   padding: 0;
   margin: 0;
   
@@ -31,8 +34,9 @@ a {
   text-decoration: none;
   color: rgba(0, 0, 0, 1.00);
 }
-* {
-  box-sizing: border-box;
+.container {
+  width: 1160px;
+  margin: 0px auto;
 }
 .visual-hidden {
   position: absolute;
@@ -102,7 +106,33 @@ a {
   opacity: 0.3;
 }
 .page-header {
+  min-height: 186px;
+  margin-top: 40px;
+  padding: 0 60px;
+  margin-bottom: 40px;
+/*  padding-top: 50px;*/
   background-color: rgba(247, 226, 150, 1.00);
+}
+.user-nav,
+.commerce-nav,
+.main-menu,
+.sub-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.header-logo {
+  display: inline-block;
+  margin-top: -20px;
+}
+.main-navigation {}
+.nav-wrapper {
+  display: flex;
+/*  margin-bottom: 50px;*/
+}
+.search-form {
+  width: 440px;
+  margin-right: auto;
 }
 .search-form input {
   margin-right: -4px;
@@ -148,9 +178,19 @@ a {
 }
 .user-nav,
 .commerce-nav {
-  line-height: 36px; 
-  list-style: none;
+  line-height: 36px;
 }
+.user-nav {
+  width: 260px;
+  margin-right: 20px;
+  display: flex;
+}
+.commerce-nav {
+  width: 220px;
+  display: flex;
+  justify-content: space-between;
+}
+.commerce-nav li {}
 .page-header a:hover,
 .page-header a:focus {
   color: rgba(0, 0, 0, 0.60);
@@ -160,6 +200,9 @@ a {
   color: rgba(0, 0, 0, 0.30);
 }
 .main-menu {
+  display: flex;
+  justify-content: space-between;
+  
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: bold;
   font-size: 18px;
@@ -167,8 +210,9 @@ a {
   line-height: auto;
   text-transform: uppercase;
   letter-spacing: 3px;
-  
-  list-style: none;
+}
+.sub-menu-wrapper {
+  display: flex;
 }
 .sub-menu {
   font-family: "Open Sans", "Arial", sans-serif;
@@ -177,13 +221,29 @@ a {
   line-height: 36px;
   text-transform: none;
   letter-spacing: normal;
-  
-  list-style: none;
 }
 
-.container {}
+.promo {
+  min-height: 500px;
+  margin-bottom: 95px;
+}
 .promo-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
+}
+.promo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.promo-img {
+  margin: auto;
+}
+.promo-description {
+  width: 500px;
+  margin-left: 40px;
+  margin-right: 60px;
 }
 .promo-number {
   font-family: "Gilroy", "Arial", sans-serif;
@@ -212,12 +272,21 @@ a {
   line-height: 1;
   color: rgba(0, 0, 0, 1.00);
 }
+.products {
+  min-height: 237px;
+  margin-bottom: 185px;
+}
 .products-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
+.products-item {
+  width: 160px;
+}
 .products-item a {
-/*  position: relative;*/
-  
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: bold;
   font-size: 18px;
@@ -238,10 +307,17 @@ a {
   background-color: rgba(240, 197, 46, 1.00);
 }
 .services {
+  min-height: 288px;
+  margin-bottom: 94px;
   background-color: rgba(229, 229, 229, 1.00);
 }
 .services-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
+}
+.services-item {
+  width: 460px;
 }
 .services-title {
   font-family: "Gilroy", "Arial", sans-serif;
@@ -249,14 +325,33 @@ a {
   font-size: 47px;
   color: rgba(0, 0, 0, 1.00);
 }
+.brands {
+  margin-bottom: 150px;
+}
 .brands-list {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
   list-style: none;
+}
+.brands-item {
+  width: 260px;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+/*  justify-content: space-between;*/
 }
 .wrapper .section-title {
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: bold;
   font-size: 47px;
   color: rgba(0, 0, 0, 1.00);
+}
+.about-us {
+  width: 480px;
+  margin-right: auto;
 }
 .about-us ul {
   font-family: "Gilroy", "Arial", sans-serif;
@@ -265,7 +360,11 @@ a {
   line-height: 40px;
   color: rgba(0, 0, 0, 1.00);
 }
+.contacts {
+  width: 560px;
+}
 .modal {}
+
 .feedback label {
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: bold;
@@ -299,17 +398,25 @@ a {
 .feedback input:invalid {
   background-color: rgba(237, 181, 181, 0.50);
 }
+
 .page-title {
+  margin: 0;
+  margin-left: 60px;
+  margin-bottom: 25px;
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: bold;
   font-size: 47px;
   color: rgba(0, 0, 0, 1.00);
 }
 .breadcrumbs {
-  color: rgba(0, 0, 0, 0.30);
+  display: flex;
+  padding: 0;
+  margin: 0;
+  margin-left: 60px;
   list-style: none;
+  cursor: default;
 }
-.breadcrumbs a {
+.breadcrumbs :nth-child(n) {
   font-size: 14px;
   line-height: 36px;
   color: rgba(0, 0, 0, 0.30);
@@ -323,9 +430,18 @@ a {
   color: rgba(0, 0, 0, 0.10);
 }
 .filter {
+  width: 328px;
+  min-height: 1283px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
   background-color: rgba(238, 238, 238, 1.00);
 }
 .filter-title {
+/*  width: 200px;*/
+  padding: 0;
+  margin: 0;
+/*  margin-right: 68px;*/
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: bold;
   font-size: 16px;
@@ -335,6 +451,10 @@ a {
   background-color: rgba(0, 0, 0, 0.08);
 }
 .filter-form {
+  align-self: flex-end;
+  width: 200px;
+  margin-top: 69px;
+  margin-right: 68px;
   border-top: 2px solid rgba(0, 0, 0, 1.00);
 }
 .filter-form fieldset {
@@ -355,10 +475,20 @@ a {
   line-height: 40px;
   color: rgba(0, 0, 0, 1.00);
 }
+.catalog {
+  width: 832px;
+  min-height: 1283px;
+  flex-grow: 1;
+}
 .sorting {
+  display: flex;
   background-color: rgba(0, 0, 0, 0.08);
 }
 .sorting-title {
+  padding: 0;
+  margin: 0;
+  margin-left: 72px;
+  margin-right: 40px;
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: bold;
   font-size: 16px;
@@ -367,7 +497,18 @@ a {
   text-align: center;
 }
 .sorting-list {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 560px;
+  margin: 0;
+  padding: 0;
   list-style: none;
+}
+.sorting-list :nth-child(n) {
+  
+}
+.sorting-list :nth-last-child(2) {
+  margin-left: auto;
 }
 .sorting-btn {
   font-weight: 400;
@@ -385,6 +526,10 @@ a {
   opacity: 1;
 }
 .catalog-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
   list-style: none;
 }
 .catalog-title {
@@ -435,13 +580,17 @@ a {
 }
 .pagination a {
   display: inline-block;
-  padding: 23px 30px;
+  min-width: 20px;
+  padding: 10px 10px;
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: bold;
   font-size: 16px;
   letter-spacing: 3px;
+  text-align: center;
   text-transform: uppercase;
   cursor: default;
+/*  временно*/
+  outline: 1px solid green;
 }
 .pagination-back:hover,
 .pagination-back:focus,
@@ -476,8 +625,17 @@ a {
   opacity: 1;
 } 
 .page-footer {
+  margin-top: 83px;
+  padding-top: 65px;
   color: rgba(255, 255, 255, 1.00);
   background-color: rgba(70, 70, 70, 1.00);
+}
+.footer-top {
+  display: flex;
+  margin-bottom: 38px;
+}
+.footer-logo {
+  margin-right: auto;
 }
 .footer-top a {
   color: rgba(255, 255, 255, 0.70);
@@ -490,13 +648,25 @@ a {
 .footer-top a:active {
   color: rgba(255, 255, 255, 0.30);
 }
+.footer-middle {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 65px;
+}
 .footer-menu {
+  width: 440px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
   list-style: none;
 }
 .footer-menu a {
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: bold;
   font-size: 18px;
+  line-height: 1px;
+  vertical-align: bottom;
   color: rgba(255, 255, 255, 1.00);
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -509,7 +679,24 @@ a {
 .footer-middle a:active {
   color: rgba(255, 255, 255, 0.30);
 }
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 67px;
+}
+.footer-bottom::before {
+  content: "";
+  width: 80px;
+  height: 7px;
+  margin-top: 13px;
+  background-color: rgba(255, 198, 0, 1.00);
+}
 .footer-social {
+  margin: 0;
+  padding: 0;
+  width: 160px;
+  display: flex;
+  justify-content: space-around;
   list-style: none;
 }
 .social-btn {}
