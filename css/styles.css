@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Gilroy";
-  font-weight: normal;
+  font-weight: 300;
   font-style: normal;
   src: 
     local("Gilroy Light"),
@@ -9,7 +9,7 @@
 }
 @font-face {
   font-family: "Gilroy";
-  font-weight: bold;
+  font-weight: 800;
   font-style: normal;
   src: 
     local("Gilroy-ExtraBold"),
@@ -22,13 +22,12 @@ body {
   min-width: 1200px;
   padding: 0;
   margin: 0;
-  
   font-family: "Open Sans", "Arial", sans-serif;
   font-weight: 300;
   font-size: 15px;
   line-height: 30px;
+  letter-spacing: 0.01em;
   color: rgba(70, 70, 70, 1.00);
-/*  letter-spacing: 1px;*/
 }
 a {
   text-decoration: none;
@@ -51,22 +50,19 @@ a {
 .btn {
   position: relative;
   z-index: 1;
-  
   display: inline-block;
-  min-width: 220px; 
+  min-width: 160px; 
   max-width: 100%;
   padding: 10px;
-  
   font-family: "Gilroy", "Arial", sans-serif;
-  font-weight: bold;
+  font-weight: 800;
   font-size: 18px;
   line-height: 1;
+  letter-spacing: 0.2em;
   color: rgba(0, 0, 0, 1.00);
   text-transform: uppercase;
-  letter-spacing: 3px;
   text-align: center;
   vertical-align: top;
-  
   background: 0;
   border: none;
 }
@@ -136,11 +132,10 @@ a {
 }
 .search-form input {
   margin-right: -4px;
-  
   font: inherit;
   line-height: 36px;
+  letter-spacing: 0.01em;
   color: rgba(0, 0, 0, 1.00);
-  
   border: none;
   background-color: transparent;
   opacity: 0.4;
@@ -156,22 +151,21 @@ a {
 .search-hidden {
   font: inherit;
   line-height: 36px;
+  letter-spacing: 0.01em;
   color: rgba(0, 0, 0, 1.00);
-  
   border: 2px solid rgba(0, 0, 0, 1.00);
   background-color: transparent;
-  opacity: 0; 
+  visibility: hidden;
 }
-.search-form input:focus ~ .search-hidden,
-.search-hidden:focus {
-  opacity: 1;
+.search-form input:focus ~ .search-hidden {
+  visibility: visible;
 }
 .search-hidden:hover,
 .search-hidden:focus {
   color: rgba(255, 255, 255, 1.00);
-  
   background-color: rgba(0, 0, 0, 1.00);
   outline: none;
+  visibility: visible;
 }
 .search-hidden:active {
   color: rgba(255, 255, 255, 0.30);
@@ -202,14 +196,12 @@ a {
 .main-menu {
   display: flex;
   justify-content: space-between;
-  
   font-family: "Gilroy", "Arial", sans-serif;
-  font-weight: bold;
+  font-weight: 800;
   font-size: 18px;
-/*  Указал тут auto, т.к. в макете auto, или лучше сделать таким же как размер шрифта*/
-  line-height: auto;
+  line-height: 1;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  letter-spacing: 3px;
 }
 .sub-menu-wrapper {
   display: flex;
@@ -219,10 +211,9 @@ a {
   font-weight: 300;
   font-size: 15px;
   line-height: 36px;
+  letter-spacing: 0.01em;
   text-transform: none;
-  letter-spacing: normal;
 }
-
 .promo {
   min-height: 500px;
   margin-bottom: 95px;
@@ -247,28 +238,32 @@ a {
 }
 .promo-number {
   font-family: "Gilroy", "Arial", sans-serif;
-  font-weight: bold;
+  font-weight: 800;
   font-size: 179px;
   line-height: 179px;
+  letter-spacing: 0.01em;
   color: rgba(255, 255, 255, 1.00);
 /*  временный контрастный фон*/
-  background-color: black;
+  background-color: rgba(0,0,0,0.25);
 }
 .promo-tagline {
   font-family: "Gilroy", "Arial", sans-serif;
-  font-weight: bold;
+  font-weight: 800;
   font-size: 47px;
-  line-height: 47px;
+  line-height: 1;
+  letter-spacing: 0.01em;
   color: rgba(0, 0, 0, 1.00);
 }
 .promo-table th {
   font-weight: 300;
   font-size: 13px;
   line-height: 20px;
+  letter-spacing: 0.01em;
 }
 .promo-table td {
   font-family: "Gilroy", "Arial", sans-serif;
-  font-size: 35px;
+  font-weight: 300;
+  font-size: 36px;
   line-height: 1;
   color: rgba(0, 0, 0, 1.00);
 }
@@ -288,16 +283,17 @@ a {
 }
 .products-item a {
   font-family: "Gilroy", "Arial", sans-serif;
-  font-weight: bold;
+  font-weight: 800;
   font-size: 18px;
+  line-height: 1;
+  letter-spacing: 0.01em;
 }
 .products-item a:active {
-  color: rgba(0, 0, 0, 0.30);
+/*  color: rgba(0, 0, 0, 0.30);*/
 }
 .products-item::before {
 /*  position: absolute;*/
 /*  z-index: -1;*/
-  
   content: "";
   min-width: 160px;
   min-height: 160px;
@@ -321,8 +317,10 @@ a {
 }
 .services-title {
   font-family: "Gilroy", "Arial", sans-serif;
-  font-weight: bold;
+  font-weight: 800;
   font-size: 47px;
+  line-height: 1;
+  letter-spacing: 0.01em;
   color: rgba(0, 0, 0, 1.00);
 }
 .brands {
@@ -341,35 +339,39 @@ a {
 .wrapper {
   display: flex;
   justify-content: center;
-/*  justify-content: space-between;*/
 }
 .wrapper .section-title {
   font-family: "Gilroy", "Arial", sans-serif;
-  font-weight: bold;
+  font-weight: 800;
   font-size: 47px;
+  line-height: 1;
+  letter-spacing: 0.01em;
   color: rgba(0, 0, 0, 1.00);
 }
 .about-us {
   width: 480px;
   margin-right: auto;
+  letter-spacing: 0;
 }
 .about-us ul {
   font-family: "Gilroy", "Arial", sans-serif;
-  font-weight: bold;
+  font-weight: 800;
   font-size: 16px;
   line-height: 40px;
   color: rgba(0, 0, 0, 1.00);
 }
 .contacts {
   width: 560px;
+  letter-spacing: 0;
 }
 .modal {}
 
 .feedback label {
   font-family: "Gilroy", "Arial", sans-serif;
-  font-weight: bold;
+  font-weight: 800;
   font-size: 18px;
   line-height: 18px;
+  letter-spacing: 0;
   color: rgba(0, 0, 0, 1.00);
 }
 .feedback input,
@@ -378,8 +380,8 @@ a {
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
+  letter-spacing: 0;
   color: rgba(70, 70, 70, 0.40);
-  
   border: none;
   background-color: rgba(229, 229, 229, 0.50);
   outline: none;
@@ -404,8 +406,10 @@ a {
   margin-left: 60px;
   margin-bottom: 25px;
   font-family: "Gilroy", "Arial", sans-serif;
-  font-weight: bold;
+  font-weight: 800;
   font-size: 47px;
+  line-height: 1;
+  letter-spacing: 0.01em;
   color: rgba(0, 0, 0, 1.00);
 }
 .breadcrumbs {
@@ -419,6 +423,7 @@ a {
 .breadcrumbs :nth-child(n) {
   font-size: 14px;
   line-height: 36px;
+  letter-spacing: 0.01em;
   color: rgba(0, 0, 0, 0.30);
 }
 .breadcrumbs a:hover,
@@ -443,10 +448,11 @@ a {
   margin: 0;
 /*  margin-right: 68px;*/
   font-family: "Gilroy", "Arial", sans-serif;
-  font-weight: bold;
+  font-weight: 800;
   font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  letter-spacing: 3px;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.08);
 }
@@ -467,12 +473,15 @@ a {
 }
 .filter-form legend {
   font-family: "Gilroy", "Arial", sans-serif;
-  font-weight: bold;
+  font-weight: 800;
   font-size: 18px;
+  line-height: 1;
+  letter-spacing: 0.01em;
 }
 .filter-form label {
   font-size: 14px;
   line-height: 40px;
+  letter-spacing: 0.01em;
   color: rgba(0, 0, 0, 1.00);
 }
 .catalog {
@@ -490,10 +499,11 @@ a {
   margin-left: 72px;
   margin-right: 40px;
   font-family: "Gilroy", "Arial", sans-serif;
-  font-weight: bold;
+  font-weight: 800;
   font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  letter-spacing: 3px;
   text-align: center;
 }
 .sorting-list {
@@ -504,9 +514,7 @@ a {
   padding: 0;
   list-style: none;
 }
-.sorting-list :nth-child(n) {
-  
-}
+.sorting-list :nth-child(n) {}
 .sorting-list :nth-last-child(2) {
   margin-left: auto;
 }
@@ -514,6 +522,7 @@ a {
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
+  letter-spacing: 0;
   cursor: default;
   opacity: 0.3;
   outline: none;
@@ -534,21 +543,25 @@ a {
 }
 .catalog-title {
   font-family: "Gilroy", "Arial", sans-serif;
-  font-weight: bold;
+  font-weight: 800;
   font-size: 18px;
+  line-height: 1;
+  letter-spacing: 0.01em;
 }
 .catalog-item span {
   font-family: "Gilroy", "Arial", sans-serif;
-  font-weight: normal;
+  font-weight: 300;
   font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0.01em;
 }
 .add-compare-btn {
   display: inline-block;
-  min-width: 220px; 
+  min-width: 200px; 
   max-width: 100%;
-  
   font-size: 13px;
   line-height: 36px;
+  letter-spacing: 0.01em;
   color: rgba(0, 0, 0, 0.50);
   text-align: center;
   vertical-align: top;
@@ -583,9 +596,10 @@ a {
   min-width: 20px;
   padding: 10px 10px;
   font-family: "Gilroy", "Arial", sans-serif;
-  font-weight: bold;
+  font-weight: 800;
   font-size: 16px;
-  letter-spacing: 3px;
+  line-height: 1;
+  letter-spacing: 0.2em;
   text-align: center;
   text-transform: uppercase;
   cursor: default;
@@ -653,6 +667,12 @@ a {
   justify-content: space-between;
   margin-bottom: 65px;
 }
+.footer-middle p {
+/*  display: inline-block;*/
+  margin: 0;
+  letter-spacing: 0;
+/*  vertical-align: bottom;*/
+}
 .footer-menu {
   width: 440px;
   margin: 0;
@@ -661,15 +681,19 @@ a {
   justify-content: space-between;
   list-style: none;
 }
+.footer-menu li {
+  margin: 0;
+  padding: 0;
+}
 .footer-menu a {
   font-family: "Gilroy", "Arial", sans-serif;
-  font-weight: bold;
+  font-weight: 800;
   font-size: 18px;
-  line-height: 1px;
-  vertical-align: bottom;
+  line-height: 1;
+  letter-spacing: 0.2em;
   color: rgba(255, 255, 255, 1.00);
   text-transform: uppercase;
-  letter-spacing: 3px;
+  vertical-align: middle;
 }
 .footer-menu a:hover,
 .footer-middle a:focus {
