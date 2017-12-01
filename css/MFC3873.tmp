@@ -794,6 +794,9 @@ input[type="radio"].visual-hidden {
   display: block;
   margin-bottom: 63px;
 }
+.contacts-map img {
+  
+}
 .about-us .btn, 
 .contacts .btn {
   min-width: 260px;

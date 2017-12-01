@@ -8,26 +8,28 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <header class="page-header container">
+    <header class="page-header main-header container">
       <a class="header-logo">
         <img src="img/logo.png" width="164" height="36" alt="Логотип DEVICE">
       </a>
-      <nav class="main-navigation">
-        <div class="nav-wrapper">
-          <form class="search-form" method="get" action="https://echo.htmlacademy.ru">
-            <input type="search" name="search" placeholder="Поиск по сайту" autofocus>
-            <button class="search-hidden" type="submit">Найти</button>
-          </form>      
+      <div class="page-header-top">
+        <form class="search-form" method="get" action="https://echo.htmlacademy.ru">
+          <input type="search" name="search" placeholder="Поиск по сайту" autofocus>
+          <button class="search-hidden" type="submit">Найти</button>
+        </form>
+        <div class="nav-wrapper">    
           <ul class="user-nav">
-            <li class="login"><a href="#">Войти</a></li>
+            <li><a class="login" href="#">Войти</a></li>
           </ul>
           <ul class="commerce-nav">
-            <li class="compare"><a href="#" title="Сравнить товары">Сравнить</a></li>
-            <li class="cart"><a href="#" title="Оплатить покупку">Корзина</a></li>
+            <li><a class="compare" href="#" title="Сравнить товары">Сравнить</a></li>
+            <li><a class="cart" href="#" title="Оплатить покупку">Корзина</a></li>
           </ul>
         </div>
+      </div>
+      <nav class="main-navigation">
         <ul class="main-menu">
-          <li>
+          <li class="main-menu-catalog">
             <a href="#">Каталог товаров</a>
             <div class="sub-menu-wrapper">
               <ul class="sub-menu">
@@ -54,7 +56,14 @@
       <h1 class="visual-hidden">Онлайн магазин гаджетов Device</h1>
       <section class="promo container">
         <h2 class="visual-hidden">Промо-акции</h2>
-<!-- оживление слайдера -->
+        <input class="promo-slide-btn visual-hidden" type="radio" id="promo-1" name="promo-toggle" checked>
+        <input class="promo-slide-btn visual-hidden" type="radio" id="promo-2" name="promo-toggle">
+        <input class="promo-slide-btn visual-hidden" type="radio" id="promo-3" name="promo-toggle">
+        <div class="promo-slide-controls">
+          <label for="promo-1"><span class="visual-hidden">Слайд 1</span></label>
+          <label for="promo-2"><span class="visual-hidden">Слайд 2</span></label>
+          <label for="promo-3"><span class="visual-hidden">Слайд 3</span></label>
+        </div>
         <ul class="promo-list">
           <li class="promo-item">
             <div class="promo-img">
@@ -63,7 +72,7 @@
             <div class="promo-description">
               <span class="promo-number">01</span>
               <p class="promo-tagline">Делай селфи,<br>как Бен Стиллер!</p>
-              <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+              <p>Самая длинная палка для селфи доступна в нашем магазине.<br>Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
               <a class="btn" href="#" title="Перейти на страницу товара">Подробнее</a>
               <table class="promo-table">
                 <tr>
@@ -86,7 +95,7 @@
             <div class="promo-description">
               <span class="promo-number">02</span>
               <p class="promo-tagline">Худеем<br>правильно!</p>
-              <p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+              <p>Мотивирующие фитнес-браслеты помогут найти в себе силы<br>не пропускать занятия и соблюдать диету.</p>
               <a class="btn" href="#" title="Перейти на страницу товара">Подробнее</a>
               <table class="promo-table">
                 <tr>
@@ -104,8 +113,8 @@
             </div>
             <div class="promo-description">
               <span class="promo-number">03</span>
-              <p class="promo-tagline">Порхает как бабочка,<br>жалит как пчела!</p>
-              <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+              <p class="promo-tagline">Порхает как бабочка, жалит как пчела!</p>
+              <p>Этот обычный, на первый взгляд, квадрокоптер оснащен<br>мощным лазером, замаскированным под стандартную камеру.</p>
               <a class="btn" href="#" title="Перейти на страницу товара">Подробнее</a>
               <table class="promo-table">
                 <tr>
@@ -125,7 +134,7 @@
         <h2 class="visual-hidden">Наши товары</h2>
         <ul class="products-list">
           <li class="products-item"><a href="#">Виртуальная реальность</a></li>
-          <li class="products-item"><a href="catalog.html">Моноподы для селфи</a></li>
+          <li class="products-item"><a href="catalog.html">Моноподы<br>для селфи</a></li>
           <li class="products-item"><a href="#">Экшн-камеры</a></li>
           <li class="products-item"><a href="#">Фитнес-браслеты</a></li>
           <li class="products-item"><a href="#">Умные часы</a></li>
@@ -135,7 +144,14 @@
       <section class="services">
         <h2 class="visual-hidden">Наши сервисы</h2>
         <div class="container">
-<!-- навигация по слайдеру -->
+          <input class="services-slide-btn visual-hidden" type="radio" id="services-1" name="services-toggle" checked>
+          <input class="services-slide-btn visual-hidden" type="radio" id="services-2" name="services-toggle">
+          <input class="services-slide-btn visual-hidden" type="radio" id="services-3" name="services-toggle">
+          <div class="services-slide-controls">
+            <label class="btn" for="services-1">Доставка</label>
+            <label class="btn" for="services-2">Гарантия</label>
+            <label class="btn" for="services-3">Кредит</label>
+          </div>
           <ul class="services-list">
             <li class="services-item">
               <h3 class="services-title">Доставка</h3>
@@ -147,7 +163,7 @@
             </li>
             <li class="services-item">
               <h3 class="services-title">Кредит</h3>
-              <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+              <p>Залезть в долговую яму стало проще! Кредитные<br>консультанты подберут для вас наиболее выгодные<br>условия кредита. Выгодные для нашего банка, разумеется.</p>
             </li>
           </ul>
         </div>
@@ -156,25 +172,25 @@
         <h2 class="visual-hidden">Бренды</h2>
         <ul class="brands-list">
           <li class="brands-item">
-            <a href="#">
+            <a class="brands-link" href="#">
               <img src="img/logo-1.jpg" width="260" height="100" alt="dji">
               <img src="img/logo-1_color.jpg" width="260" height="100" alt="dji">
             </a>
           </li>
           <li class="brands-item">
-            <a href="#">
+            <a class="brands-link" href="#">
               <img src="img/logo-2.jpg" width="260" height="100" alt="sp-gadgets">
               <img src="img/logo-2_color.jpg" width="260" height="100" alt="sp-gadgets">
             </a>
           </li>
           <li class="brands-item">
-            <a href="#">
+            <a class="brands-link" href="#">
               <img src="img/logo-3.jpg" width="260" height="100" alt="gopro">
               <img src="img/logo-3_color.jpg" width="260" height="100" alt="gopro">
             </a>
           </li>
           <li class="brands-item">
-            <a href="#">
+            <a class="brands-link" href="#">
               <img src="img/logo-4.jpg" width="260" height="100" alt="vive">
               <img src="img/logo-4_color.jpg" width="260" height="100" alt="vive">
             </a>
@@ -196,7 +212,7 @@
         <section class="contacts">
           <h2 class="section-title">Контакты</h2>
           <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-          <a href="https://www.google.ru/maps" target="_blank">
+          <a class="contacts-map" href="https://www.google.ru/maps/place/%D1%83%D0%BB.+%D0%A1%D1%82%D1%80%D0%BE%D0%B8%D1%82%D0%B5%D0%BB%D0%B5%D0%B9,+15,+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0,+119311/@55.6876479,37.527955,16z/data=!4m5!3m4!1s0x46b54cf65f5c8955:0x694710ccd55501e!8m2!3d55.687031!4d37.529618" target="_blank">
             <img src="img/map.jpg" width="560" height="222" alt="Карта проезда">
           </a>
           <a class="btn" href="#">Напишите нам</a>
@@ -209,11 +225,11 @@
           <img src="img/logo-footer.png" width="163" height="36" alt="Логотип DEVICE">
         </a>
         <ul class="user-nav">
-          <li class="login"><a href="#">Войти</a></li>
+          <li><a class="login" href="#">Войти</a></li>
         </ul>
         <ul class="commerce-nav">
-          <li class="compare"><a href="#" title="Сравнить товары">Сравнить</a></li>
-          <li class="cart"><a href="#" title="Оплатить покупку">Корзина</a></li>
+          <li><a class="compare" href="#" title="Сравнить товары">Сравнить</a></li>
+          <li><a class="cart" href="#" title="Оплатить покупку">Корзина</a></li>
         </ul>
       </div>
       <div class="footer-middle container">
@@ -227,14 +243,14 @@
       </div>
       <div class="footer-bottom container">
         <ul class="footer-social">
-          <li><a class="social-btn" href="#" title="Мы в фейсбуке" target="_blank">Фейсбук</a></li>
-          <li><a class="social-btn" href="#" title="Наш инстаграм" target="_blank">Инстаграм</a></li>
-          <li><a class="social-btn" href="#" title="Наш твиттер" target="_blank">Твиттер</a></li>
+          <li><a class="social-btn social-fb" href="#" title="Мы в фейсбуке" target="_blank"><span class="visual-hidden">Фейсбук</span></a></li>
+          <li><a class="social-btn social-i" href="#" title="Наш инстаграм" target="_blank"><span class="visual-hidden">Инстаграм</span></a></li>
+          <li><a class="social-btn social-tw" href="#" title="Наш твиттер" target="_blank"><span class="visual-hidden">Твиттер</span></a></li>
         </ul>
-        <a class="copyright" href="https://htmlacademy.ru/intensive/htmlcss" title="htmlacademy.ru" target="_blank">htmlacademy</a>
+        <a class="copyright" href="https://htmlacademy.ru/intensive/htmlcss" title="htmlacademy.ru" target="_blank"><span class="visual-hidden">htmlacademy</span></a>
       </div>
     </footer>
-    <section class="modal modal-feedback">
+    <section class="modal-feedback">
       <h2 class="visual-hidden">Обратная связь</h2>
       <form class="feedback" method="post" action="https://echo.htmlacademy.ru">
         <p>
@@ -245,20 +261,20 @@
           <label for="email">Ваш e-mail:</label>
           <input type="email" id="email" name="email" placeholder="Для отправки ответа" required>
         </p>
-        <p>
+        <p class="feedback-message">
           <label for="message">Текст письма:</label>
-          <textarea id="message" name="message" placeholder="В свободной форме" rows="5" cols="50"></textarea>
+          <textarea id="message" name="message" placeholder="В свободной форме"></textarea>
         </p>
         <button class="btn" type="submit">Отправить</button>
       </form>
-      <button class="modal-close" type="button">Закрыть</button> 
+      <button class="modal-close" type="button"><span class="visual-hidden">Закрытьtop</span></button> 
     </section>
     <section class="modal modal-map">
       <h2 class="visual-hidden">Как до нас добраться?</h2>
       <p>
         <img src="img/map-big.jpg" width="960" height="559" alt="г. Москва, ул. Строителей, 15">
       </p>
-      <button class="modal-close" type="button">Закрыть</button>
+      <button class="modal-close" type="button"><span class="visual-hidden">Закрыть</span></button>
     </section>
   </body>
 </html>

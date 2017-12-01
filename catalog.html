@@ -12,23 +12,25 @@
       <a class="header-logo" href="index.html">
         <img src="img/logo.png" width="164" height="36" alt="Логотип DEVICE">
       </a>
-      <nav class="main-navigation">
-        <div class="nav-wrapper">
-          <form class="search-form" method="get" action="https://echo.htmlacademy.ru">
-            <input type="search" name="search" placeholder="Поиск по сайту" autofocus>
-            <button class="search-hidden" type="submit">Найти</button>
-          </form>      
+      <div class="page-header-top">
+        <form class="search-form" method="get" action="https://echo.htmlacademy.ru">
+          <input type="search" name="search" placeholder="Поиск по сайту" autofocus>
+          <button class="search-hidden" type="submit">Найти</button>
+        </form>
+        <div class="nav-wrapper">      
           <ul class="user-nav">
-            <li class="login"><a href="#">Валентин петухов</a></li>
-            <li class="logout"><a href="#">Выйти</a></li>
+            <li><a class="login" href="#">Валентин петухов</a></li>
+            <li><a class="logout" href="#">Выйти</a></li>
           </ul>
           <ul class="commerce-nav">
-            <li class="compare"><a href="#" title="Сравнить товары">Сравнить</a></li>
-            <li class="cart"><a href="#" title="Оплатить покупку">Корзина</a></li>
+            <li><a class="compare" href="#" title="Сравнить товары">Сравнить</a></li>
+            <li><a class="cart" href="#" title="Оплатить покупку">Корзина</a></li>
           </ul>
         </div>
+      </div>
+      <nav class="main-navigation">
         <ul class="main-menu">
-          <li>
+          <li class="main-menu-catalog">
             <a href="#">Каталог товаров</a>
             <div class="sub-menu-wrapper">
               <ul class="sub-menu">
