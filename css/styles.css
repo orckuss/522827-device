@@ -782,11 +782,10 @@ input[type="radio"].visual-hidden {
   top: 50%;
   left: 50%;
   z-index: 2;
-  display: none;
   width: 960px;
-  transform: translate(-50%, -50%);
   background-color: rgba(255, 255, 255, 1.00);
   box-shadow: 0 10px 20px rgba(4, 6, 6, 0.20);
+  visibility: hidden;
 }
 .modal-close {
   position: absolute;
@@ -822,14 +821,14 @@ input[type="radio"].visual-hidden {
 .modal-close:active {
   background-color: rgba(240, 197, 46, 0.30);
 }
-.modal-show {
-  display: block;
-}
 .modal-feedback {
   padding: 0 100px;
   padding-top: 96px;
   padding-bottom: 78px;
   box-shadow: 0 20px 40px rgba(4, 6, 6, 0.75);
+  transform: translate(-50%, -50%) scale(0);
+  transition-property: visibility, transform;
+  transition-duration: 0.2s, 0.2s;
 }
 .feedback {
   display: flex;
@@ -891,9 +890,18 @@ input[type="radio"].visual-hidden {
 }
 .modal-map {
   height: 559px;
+  transform: translate(-50%, -50%);
+  opacity: 0;
 }
 .modal-map p {
   margin: 0;
+}
+.modal-show {
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  transition-property: transform, opacity;
+  transition-duration: 0.4s, 0.4s;
 }
 /*каталог*/
 .page-title {
