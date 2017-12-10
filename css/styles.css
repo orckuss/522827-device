@@ -764,9 +764,13 @@ input[type="radio"].visual-hidden {
   letter-spacing: 0;
 }
 .contacts-map {
+  position: relative;
   display: block;
   margin-bottom: 69px;
   line-height: 0;
+}
+.contacts-map iframe {
+  position: absolute;
 }
 .contacts-map img {
   width: 560px;
@@ -895,6 +899,11 @@ input[type="radio"].visual-hidden {
 }
 .modal-map p {
   margin: 0;
+}
+.modal-map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .modal-show {
   visibility: visible;
